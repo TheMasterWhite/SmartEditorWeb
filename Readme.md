@@ -2,18 +2,22 @@
 
 ## <center>项目概述</center>
 
-随着大模型的广泛应用，各类AI智能写作辅助工具如雨后春笋般涌现，然而市面上多数产品仍以chat的形式为用户提供简单的写作辅助服务，在基于特定素材的进行创作的场景中表现出一定的局限性，且这类辅助工具未集成文本编辑器，导致用户在写作时需要频繁切换窗口，对工作效率产生了一定的影响。
+随着大语言模型的广泛应用，各类AI智能写作辅助工具如雨后春笋般涌现，据市场调研分析，我们发现，有的产品只提供格式化文本生成功能，并不支持对生成的文本进行实时修改；有的产品将AI文本润色、在线文档编辑和AI助手这三个在文档撰写中使用频率最高的功能分散在不同的页面；有的产品直接以Chat的形式为用户提供简单的写作辅助服务，且大部分产品在基于特定素材进行创作的场景中表现出一定的局限性，对工作效率产生的一定的影响。
 
-为了提高文本写作的工作效率、改善写作辅助工具的用户体验，本项目基于PaddlePaddle、ERNIE SDK、WangEditor框架等技术，构建了一款智能写作助手。该助手旨在实现如下目标：
+为了提高文本写作的工作效率、改善写作辅助工具的用户体验，本项目基于PaddlePaddle、ERNIE SDK、WangEditor框架等技术，构建了一款智能写作助手。该助手旨在实现以下目标：
 
-- 在不切换窗口的情况下**同步写作与使用AI辅助功能**
-- 调用多模态模型**自动化处理用户上传的素材文件**
+- 实现无需切换窗口，即可**在写作的同时使用AI辅助功能。**
+- 调用多模态模型**自动识别并处理用户上传的素材文件。**
 
-- 基于用户提供的知识库进行**格式化文本生成**
+- 基于用户提供的知识库素材进行**格式化文本生成**。
+
+**项目展示视频：**
+
+<center><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113281758927386&bvid=BV1hY2uYNEyi&cid=26225216269&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe></center>
 
 ## <center>项目技术方案</center>
 
-系统功能架构主要包括文本智能润色、格式化文本生成、多媒体信息处理以及用户知识库管理等模块，总体功能架构如图1所示。
+​        系统功能架构主要包括文本智能润色、格式化文本生成、多媒体信息处理以及用户知识库管理等模块，总体功能架构如图1所示。
 
 <p align="center">
   <img src="https://smart-editor.oss-cn-shenzhen.aliyuncs.com/%E7%B3%BB%E7%BB%9F%E6%80%BB%E4%BD%93%E6%9E%B6%E6%9E%84%E5%9B%BE.png" alt="图注内容" style="display:block;margin:auto;">
@@ -41,7 +45,7 @@
 
 #### **格式化文本生成模块**
 
-该模块基于多媒体数据处理+格式化文本生成工具链搭建，其功能架构如图4所示，页面效果如图5、图6所示。，载入文本生成提示词与用户需求，通过ERNIE SDK向文心大模型发起调用，如果对大模型生成结果不满意，可选择重新生成。
+该模块基于多媒体数据处理+格式化文本生成工具链搭建，其功能架构如图4所示，页面效果如图5、图6所示。载入文本生成提示词与用户需求，通过ERNIE SDK向文心大模型发起调用，如果对大模型生成结果不满意，可选择重新生成。
 <p align="center">
   <img src="https://smart-editor.oss-cn-shenzhen.aliyuncs.com/%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%96%87%E6%9C%AC%E7%94%9F%E6%88%90%E5%B7%A5%E5%85%B7%E9%93%BE.png" alt="图注内容" style="display:block;margin:auto;">
   <p style="text-align:center;">图 4 多媒体数据处理+格式化文本生成工具链架构图</p>
@@ -74,3 +78,8 @@
   <img src="https://smart-editor.oss-cn-shenzhen.aliyuncs.com/%E5%9C%A8%E7%BA%BF%E6%96%87%E6%A1%A3%E7%95%8C%E9%9D%A2.png" alt="图注内容" style="display:block;margin:auto;">
   <p style="text-align:center;">图 8 知识库文件管理页面</p>
 </p>
+### <center>**项目后端源码**</center>
+**AI Studio项目地址:** [https://aistudio.baidu.com/projectdetail/8375069](https://aistudio.baidu.com/projectdetail/8375069)
+
+**AI Studio应用地址：**[https://static-6e9fab9se.aistudio-app.com](https://static-6e9fab9se.aistudio-app.com)
+
